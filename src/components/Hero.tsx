@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Cloud, Users, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-cloud-it.jpg";
+import TrustBadges from "@/components/TrustBadges";
 
 const Hero = () => {
   return (
@@ -100,6 +101,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        
+        {/* Trust Badges */}
+        <TrustBadges />
       </div>
     </section>
   );

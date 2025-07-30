@@ -16,19 +16,25 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#services" className="text-muted-foreground hover:text-primary transition-colors">
               Услуги
             </a>
-            <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/calculator" className="text-muted-foreground hover:text-primary transition-colors">
+              Калькулятор
+            </a>
+            <a href="/server-calculator" className="text-muted-foreground hover:text-primary transition-colors">
+              Сервера
+            </a>
+            <a href="/#pricing" className="text-muted-foreground hover:text-primary transition-colors">
               Тарифы
             </a>
-            <a href="#advantages" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#advantages" className="text-muted-foreground hover:text-primary transition-colors">
               Преимущества
             </a>
-            <a href="#reviews" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#reviews" className="text-muted-foreground hover:text-primary transition-colors">
               Отзывы
             </a>
-            <a href="#contacts" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#contacts" className="text-muted-foreground hover:text-primary transition-colors">
               Контакты
             </a>
           </nav>
