@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Cloud, Users, Shield } from "lucide-react";
-import heroImage from "@/assets/hero-cloud-it.jpg";
+import heroImage from "@/assets/hero-cloud-it-with-1c.jpg";
 import TrustBadges from "@/components/TrustBadges";
 
 const Hero = () => {
