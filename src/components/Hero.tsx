@@ -6,8 +6,17 @@ import TrustBadges from "@/components/TrustBadges";
 
 const Hero = () => {
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-background via-accent/20 to-background">
-      <div className="container mx-auto px-4">
+    <section className="pt-24 pb-16 bg-gradient-hero relative overflow-hidden">
+      {/* Декоративные линии и элементы в стиле изображения */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -right-32 w-96 h-96 bg-tertiary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 -left-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-2 h-32 bg-tertiary/20 rotate-45 blur-sm"></div>
+        <div className="absolute top-1/3 right-1/4 w-2 h-24 bg-secondary/20 rotate-12 blur-sm"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-1 h-20 bg-primary/20 -rotate-45 blur-sm"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
@@ -57,7 +66,7 @@ const Hero = () => {
               <Button variant="hero" size="xl" className="shadow-glow">
                 Попробовать бесплатно 14 дней
               </Button>
-              <Button variant="outline" size="xl">
+              <Button variant="cloud" size="xl">
                 Рассчитать стоимость
               </Button>
             </div>
@@ -76,28 +85,32 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Image */}
-          <div className="relative animate-slide-up">
-            <div className="relative overflow-hidden rounded-2xl shadow-large">
+          <div className="relative animate-slide-up animate-float">
+            <div className="relative overflow-hidden rounded-3xl shadow-dynamic">
               <img
                 src={heroImage}
                 alt="Облачная 1С - современное решение для бизнеса"
                 className="w-full h-auto object-cover"
               />
               
-              {/* Floating Stats */}
-              <div className="absolute top-6 right-6 bg-background/90 backdrop-blur-sm rounded-lg p-4 shadow-medium">
+              {/* Floating Stats - в стиле облачных элементов */}
+              <div className="absolute top-6 right-6 bg-gradient-cloud backdrop-blur-md rounded-2xl p-4 shadow-glow border border-white/30">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">99.9%</div>
-                  <div className="text-xs text-muted-foreground">Uptime</div>
+                  <div className="text-xs text-primary/70">Uptime</div>
                 </div>
               </div>
               
-              <div className="absolute bottom-6 left-6 bg-background/90 backdrop-blur-sm rounded-lg p-4 shadow-medium">
+              <div className="absolute bottom-6 left-6 bg-gradient-cloud backdrop-blur-md rounded-2xl p-4 shadow-glow border border-white/30">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-success">24/7</div>
-                  <div className="text-xs text-muted-foreground">Поддержка</div>
+                  <div className="text-2xl font-bold text-tertiary">24/7</div>
+                  <div className="text-xs text-primary/70">Поддержка</div>
                 </div>
               </div>
+              
+              {/* Декоративные элементы */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-tertiary/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-secondary/20 rounded-full blur-xl"></div>
             </div>
           </div>
         </div>
